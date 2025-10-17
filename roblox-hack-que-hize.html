@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CondorHack</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #mensaje {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>No intentes usar hacks para un videojuego o algo, en algunos casos es ilegal y le quitas la diversion a los demas jugadores :v</h1>
+  <h2>toma tu castigo y aprende tu leccion c:</h2>
+
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/9fD2er6CHLA?autoplay=1"
+    title="Rickroll"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
+  <p id="mensaje"></p>
+
+  <script>
+    // Detecta si el usuario está en celular o PC
+    const esMovil = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    const mensaje = document.getElementById('mensaje');
+
+    if (esMovil) {
+      mensaje.textContent = "- alguien dentro de tu celular...";
+    } else {
+      mensaje.textContent = "- alguien dentro de tu PC...";
+    }
+  </script>
+</body>
+</html>
