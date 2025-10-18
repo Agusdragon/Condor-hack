@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CondorHack</title>
   <style>
     body {
@@ -10,30 +10,88 @@
       color: white;
       text-align: center;
       font-family: Arial, sans-serif;
+      margin: 0 20px;
+    }
+    h1, h2 {
+      margin: 10px 0;
+      word-wrap: break-word;
     }
     #mensaje {
       margin-top: 20px;
       font-size: 1.2em;
       color: red;
     }
+    /* Contenedor responsivo para el iframe */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+      margin: 20px auto;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+
+    /* Estilos para pantallas grandes (PC) */
+    @media (min-width: 768px) {
+      body {
+        margin: 0 100px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      #mensaje {
+        font-size: 1.5em;
+      }
+      .video-container {
+        max-width: 560px;
+      }
+    }
+
+    /* Estilos para pantallas pequeñas (celular) */
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 1.2em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      #mensaje {
+        font-size: 1.2em;
+      }
+      body {
+        margin: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>No intentes usar hacks para un videojuego o algo, en algunos casos es ilegal y le quitas la diversion a los demas jugadores :v</h1>
-  <h2>toma tu castigo y aprende tu leccion c:</h2>
+  <h1>No intentes usar hacks para un videojuego o algo, en algunos casos es ilegal y le quitas la diversión a los demás jugadores :v</h1>
+  <h2>Toma tu castigo y aprende tu lección c:</h2>
 
-  <iframe width="560" height="315"
-    src="https://www.youtube.com/embed/9fD2er6CHLA?autoplay=1"
-    title="Rickroll"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/9fD2er6CHLA?autoplay=1"
+      title="Rickroll"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
 
   <p id="mensaje"></p>
 
   <script>
-    // Detecta si el usuario está en celular o PC
     const esMovil = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
     const mensaje = document.getElementById('mensaje');
 
@@ -45,3 +103,4 @@
   </script>
 </body>
 </html>
+
